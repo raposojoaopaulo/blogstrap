@@ -1,5 +1,5 @@
 <h1>Edit Article</h1>
 
-<%= render 'form', article: @article %>
+<p><%= render 'form', article: @article %></p>
 
-<p> <%= link_to 'Back', articles_path %> </p>
+<p> <%= link_to 'Back', article_path(@article), class: "btn btn-secondary" %> </p>

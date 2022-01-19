@@ -1,9 +1,11 @@
-<h1><%= @article.title %></h1>
+<article class="blog-post">
+  <h2 class="blog-post-title"><%= @article.title %></h2>
+   <p class="blog-post-meta"> <%= datebr(@article.created_at) %> <a href="#">Chris</a></p>
 
-<p><%= @article.body %><p>
+      <p><%= @article.body %></p>
 
-<ul>
-<li><%= link_to 'Edit', edit_article_path(@article) %></li>
-<li><%= link_to 'Delete', article_path(@article), method: :delete, data: { confirm: "Are you sure?" } %></li>
-<li><%= link_to 'Back', articles_path %></li>
-</ul>
+    <%= link_to 'Back', articles_path, class: "btn btn-secondary" %>
+    <%= link_to 'Edit', edit_article_path(@article), class: "btn btn-secondary" %>
+    <%= link_to 'Delete', article_path(@article), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger" %>
+
+</article>
